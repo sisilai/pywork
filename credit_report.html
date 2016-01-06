@@ -23,11 +23,14 @@
 
         .main-info {
             background-color: #ffffff;
+            margin-top: 10px;
         }
 
         .main-info-list {
             list-style: none;
             margin-left: 16px;
+            margin-top: 0;
+            margin-bottom: 0;
             -webkit-padding-start: 0;
         }
 
@@ -51,15 +54,18 @@
 
         .other-info {
             background-color: #ffffff;
+            margin-top: 10px;
         }
 
         .other-info-list {
             list-style: none;
             margin-left: 16px;
+            margin-top: 0;
+            margin-bottom: 0;
             -webkit-padding-start: 0;
         }
 
-        .other-info-list li {
+        .other-info-list>li {
             height: 46px;
             line-height: 46px;
             border-bottom: 1px solid #f2f2f2;
@@ -68,27 +74,39 @@
         .other-info-list-title {
             font-size: 15px;
             color: #858585;
+            margin-left: 5px;
         }
 
-
-        .other-info-list-img {
+        .business-img-div {
+            float: left;
+            background: url("images/icon-report-3x.png") center no-repeat;
             width: 20px;
-            height: 20px;
-        }
-
-        .other-info-list-img-arrow {
-            width: 10px;
-            height: 15px;
-            float: right;
-            margin-right: 14px;
-        }
-
-        .style {
-            display: table-cell;
-            vertical-align: middle;
-            text-align: center;
-            width: inherit;
             height: inherit;
+            background-size: 20px;
+        }
+
+        .business-img-div2 {
+            float: left;
+            background: url("images/icon-analysis-3x.png") center no-repeat;
+            width: 20px;
+            height: inherit;
+            background-size: 20px;
+        }
+
+        .business-img-div3 {
+            float: left;
+            background: url("images/icon-risk-3x.png") center no-repeat;
+            width: 20px;
+            height: inherit;
+            background-size: 20px;
+        }
+        .other-info-list-img-arrow-div {
+            float: right;
+            background: url("images/icon-arrow-right-3x.png") center no-repeat;
+            width: 10px;
+            height: inherit;
+            background-size: 10px 15px;
+            margin-right: 14px;
         }
     </style>
 </head>
@@ -130,13 +148,19 @@
     <div class="other-info">
         <ul class="other-info-list">
             <li>
-                <div class="style">
-                    <img src="images/icon-report-3x.png" class="other-info-list-img">
-                    <span class="other-info-list-title">工商信息</span>
-                    <!--<div class="other-info-list-img-arrow-style">-->
-                        <img src="images/icon-arrow-right-3x.png" class="other-info-list-img-arrow">
-                    <!--</div>-->
-                </div>
+                <div class="business-img-div"></div>
+                <span class="other-info-list-title">工商信息</span>
+                <div class="other-info-list-img-arrow-div"></div>
+            </li>
+            <li>
+                <div class="business-img-div2"></div>
+                <span class="other-info-list-title">分析信息</span>
+                <div class="other-info-list-img-arrow-div"></div>
+            </li>
+            <li>
+                <div class="business-img-div3"></div>
+                <span class="other-info-list-title">风险信息</span>
+                <div class="other-info-list-img-arrow-div"></div>
             </li>
         </ul>
     </div>
