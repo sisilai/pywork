@@ -2,7 +2,7 @@
 body {
     background-color: #f2f2f2;
     margin: 0;
-    font-family: "微软雅黑";
+    font-family: 微软雅黑;
 }
 
 .company-name {
@@ -90,27 +90,24 @@ body {
     margin-left: 13px;
 }
 
-.business-img {
+.relate-img {
     float: left;
-    background: url("images/icon-report-3x.png") center no-repeat;
     width: 20px;
     height: inherit;
+}
+
+.business-img {
+    background: url("images/icon-report-3x.png") center no-repeat;
     background-size: 20px;
 }
 
 .analysis-img {
-    float: left;
     background: url("images/icon-analysis-3x.png") center no-repeat;
-    width: 20px;
-    height: inherit;
     background-size: 20px;
 }
 
 .risk-img {
-    float: left;
     background: url("images/icon-risk-3x.png") center no-repeat;
-    width: 20px;
-    height: inherit;
     background-size: 20px;
 }
 
