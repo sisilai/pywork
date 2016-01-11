@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <title>倒计时</title>
+</head>
+<body>
+
+<body data-ng-app="sendApp" data-ng-controller="sendCtrl">
+
+<script>
+    var app = angular.module("sendApp", []);
+    app.controller('sendCtrl', function($scope) {
+        $scope.countTime = 3000;//60000;
+        $scope.countTimeText = "3秒";//60000;
+        //$scope.tips = "发送";
+        $scope.sendMessage = function() {
+
+            function subCountTime() {
+                $scope.$apply(function(){
+                    $scope.countTime = $scope.countTime - 1000;
+                    $scope.countTimeText = $scope.countTime/1000 + "秒";
+                });
+                console.log($scope.countTime);
+                if ($scope.countTime == 0) {
+                    clearInterval(intervalId);
+                    alert("倒计时完成");
+                }
+            }
+
+
+            var intervalId = setInterval(subCountTime, 1000);
+        };
+    });
+</script>
+
+<input data-ng-model="countTimeText">
+<input type="button" value="发送" data-ng-click="sendMessage()">
+
+
+</body>
+
+</body>
+</html>
